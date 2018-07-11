@@ -1,14 +1,11 @@
 <package>
   <name>robot_controllers_msgs</name>
-  <version>0.6.0</version>
+  <version>0.5.4</version>
   <description>
     Messages for use with robot_controllers framework.
   </description>
-
   <author>Michael Ferguson</author>
-  <maintainer email="rtoris@fetchrobotics.com">Russell Toris</maintainer>
-  <maintainer email="amoriarty@fetchrobotics.com">Alex Moriarty</maintainer>
-
+  <maintainer email="mferguson@fetchrobotics.com">Michael Ferguson</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
