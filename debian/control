@@ -1,0 +1,12 @@
+Source: ros-melodic-robot-controllers
+Section: misc
+Priority: extra
+Maintainer: Russell Toris <rtoris@fetchrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-actionlib, ros-melodic-actionlib-msgs, ros-melodic-angles, ros-melodic-catkin, ros-melodic-control-msgs, ros-melodic-geometry-msgs, ros-melodic-kdl-parser, ros-melodic-nav-msgs, ros-melodic-orocos-kdl, ros-melodic-pluginlib, ros-melodic-robot-controllers-interface, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf, ros-melodic-tf-conversions, ros-melodic-trajectory-msgs, ros-melodic-urdf
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-robot-controllers
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-actionlib, ros-melodic-actionlib-msgs, ros-melodic-control-msgs, ros-melodic-geometry-msgs, ros-melodic-kdl-parser, ros-melodic-nav-msgs, ros-melodic-orocos-kdl, ros-melodic-pluginlib, ros-melodic-robot-controllers-interface, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf, ros-melodic-tf-conversions, ros-melodic-trajectory-msgs, ros-melodic-urdf
+Description: Some basic robot controllers for use with robot_controllers_interface.
