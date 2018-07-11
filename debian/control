@@ -1,0 +1,12 @@
+Source: ros-melodic-robot-controllers-interface
+Section: misc
+Priority: extra
+Maintainer: Russell Toris <rtoris@fetchrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-actionlib, ros-melodic-catkin, ros-melodic-pluginlib, ros-melodic-robot-controllers-msgs, ros-melodic-roscpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-robot-controllers-interface
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-actionlib, ros-melodic-pluginlib, ros-melodic-robot-controllers-msgs, ros-melodic-roscpp
+Description: Generic framework for robot controls.
