@@ -35,7 +35,7 @@
 
 /* Author: Michael Ferguson */
 
-#include <pluginlib/class_list_macros.h>
+#include <pluginlib/class_list_macros.hpp>
 #include <robot_controllers/follow_joint_trajectory.h>
 
 using angles::shortest_angular_distance;
@@ -121,7 +121,7 @@ int FollowJointTrajectoryController::init(ros::NodeHandle& nh, ControllerManager
   path_tolerance_.qdd.resize(joints_.size());
   goal_tolerance_.q.resize(joints_.size());
   goal_tolerance_.qd.resize(joints_.size());
-  goal_tolerance_.qdd.resize(joints_.size()); 
+  goal_tolerance_.qdd.resize(joints_.size());
 
   // Setup ROS interfaces
   server_.reset(new server_t(nh, "",
@@ -368,6 +368,7 @@ void FollowJointTrajectoryController::executeCb(const control_msgs::FollowJointT
 
   Trajectory new_trajectory;
   Trajectory executable_trajectory;
+  goal_time = goal->trajectory.header.stamp;
 
   // Make a trajectory from our message
   if (!trajectoryFromMsg(goal->trajectory, joint_names_, &new_trajectory))
@@ -419,8 +420,10 @@ void FollowJointTrajectoryController::executeCb(const control_msgs::FollowJointT
       // use the generated trajectory
       executable_trajectory = new_trajectory;
 
-      // if this hasn't started yet, need to insert current position
-      if (goal->trajectory.points[0].time_from_start.toSec() > 0.0)
+      // if this hasn't started yet or if the header stamp is in the future,
+      // need to insert current position
+      if (goal->trajectory.points[0].time_from_start.toSec() > 0.0 ||
+          executable_trajectory.points[0].time > ros::Time::now().toSec())
       {
         executable_trajectory.points.insert(
           executable_trajectory.points.begin(),
@@ -547,6 +550,9 @@ void FollowJointTrajectoryController::executeCb(const control_msgs::FollowJointT
 
     // Publish feedback
     feedback_.header.stamp = ros::Time::now();
+    feedback_.desired.time_from_start = feedback_.header.stamp - goal_time;
+    feedback_.actual.time_from_start = feedback_.header.stamp - goal_time;
+    feedback_.error.time_from_start = feedback_.header.stamp - goal_time;
     server_->publishFeedback(feedback_);
     ros::Duration(1/50.0).sleep();
   }
