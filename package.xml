@@ -1,14 +1,13 @@
 <package>
   <name>robot_controllers_msgs</name>
-  <version>0.7.0</version>
+  <version>0.7.1</version>
   <description>
     Messages for use with robot_controllers framework.
   </description>
 
   <author>Michael Ferguson</author>
-  <maintainer email="rtoris@fetchrobotics.com">Russell Toris</maintainer>
-  <maintainer email="csaldanha@fetchrobotics.com">Carl Saldanha</maintainer>
-  <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+  <maintainer email="eric.relson@zebra.com">Eric Relson</maintainer>
+  <maintainer email="jeffrey.wilson@zebra.com">Jeff Wilson</maintainer>
   <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
 
   <license>BSD</license>
