@@ -2,6 +2,11 @@
 Changelog for package robot_controllers_interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.1 (2024-05-21)
+------------------
+* Update maintainers
+* Contributors: Eric Relson
+
 0.7.0 (2021-02-22)
 ------------------
 * Added gyro interface to robot controllers (`#43 <https://github.com/fetchrobotics/robot_controllers/issues/43>`_)
