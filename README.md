@@ -1,3 +1,29 @@
+## robot_controllers (noetic) - 0.7.1-1
+
+The packages in the `robot_controllers` repository were released into the `noetic` distro by running `/usr/bin/bloom-release robot_controllers --rosdistro noetic` on `Tue, 21 May 2024 21:00:57 -0000`
+
+These packages were released:
+- `robot_controllers`
+- `robot_controllers_interface`
+- `robot_controllers_msgs`
+
+Version of package(s) in repository `robot_controllers`:
+
+- upstream repository: https://github.com/fetchrobotics/robot_controllers.git
+- release repository: https://github.com/fetchrobotics-gbp/robot_controllers-release.git
+- rosdistro version: `0.7.0-1`
+- old version: `0.7.0-1`
+- new version: `0.7.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## robot_controllers (noetic) - 0.7.0-1
 
 The packages in the `robot_controllers` repository were released into the `noetic` distro by running `/usr/local/bin/bloom-release robot_controllers --rosdistro noetic` on `Tue, 23 Feb 2021 06:18:20 -0000`
